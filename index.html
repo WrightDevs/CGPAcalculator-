@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPA & CGPA Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h1>GPA & CGPA CALCULATOR</h1>
+      </div>
+    </header>
+
+    <div class="calculator-container">
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="gpa">GPA</button>
+        <button class="tab-btn" data-tab="cgpa">CGPA</button>
+      </div>
+
+      <div class="tab-content active" id="gpa-tab">
+        <div class="calculator-card">
+          <div class="calculator-header">
+            <h2>Grade Point Average Calculator</h2>
+            <div class="scale-selector">
+              <label for="grade-scale">Grade Scale:</label>
+              <select id="grade-scale">
+                <option value="5.0">5.0 Scale</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="courses-container">
+            <div class="course-header">
+              <span>Course</span>
+              <span>Units</span>
+              <span>Grade</span>
+              <span></span>
+            </div>
+            <div id="courses-list">
+              <!-- Course rows will be added here -->
+            </div>
+          </div>
+
+          <button id="add-course" class="btn-add">
+            <span class="plus-icon">+</span> Add Course
+          </button>
+
+          <div class="result-container">
+            <div class="result-card">
+              <div class="result-value" id="gpa-result">0.00</div>
+              <div class="result-label">GPA</div>
+            </div>
+            <div class="result-card">
+              <div class="result-value" id="total-credits">0</div>
+              <div class="result-label">Units</div>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button id="calculate-gpa" class="btn-calculate">Calculate GPA</button>
+            <button id="reset-gpa" class="btn-reset">Reset</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="cgpa-tab">
+        <div class="calculator-card">
+          <div class="calculator-header">
+            <h2>Cumulative Grade Point Average Calculator</h2>
+            <div class="scale-selector">
+              <label for="cgpa-grade-scale">Grade Scale:</label>
+              <select id="cgpa-grade-scale">
+                <option value="4.0">4.0 Scale</option>
+                <option value="10.0">10.0 Scale</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="semesters-container">
+            <div class="semester-header">
+              <span>Semester</span>
+              <span>Units</span>
+              <span>GPA</span>
+              <span></span>
+            </div>
+            <div id="semesters-list">
+              <!-- Semester rows will be added here -->
+            </div>
+          </div>
+
+          <button id="add-semester" class="btn-add">
+            <span class="plus-icon">+</span> Add Semester
+          </button>
+
+          <div class="result-container">
+            <div class="result-card">
+              <div class="result-value" id="cgpa-result">0.00</div>
+              <div class="result-label">CGPA</div>
+            </div>
+            <div class="result-card">
+              <div class="result-value" id="total-cgpa-credits">0</div>
+              <div class="result-label">Units</div>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button id="calculate-cgpa" class="btn-calculate">Calculate CGPA</button>
+            <button id="reset-cgpa" class="btn-reset">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>N/B: This is calculated using FUTO's grading scale</p>
+      <p>© 2025 | GPA & CGPA Calculator | <a href="https://x.com/_Wri_Ght?t=2oqS4ITJwr5wZTVyNQK1mg&s=09">_Wri_Ght</a> | Department of Cybersecurity</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
