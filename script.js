@@ -151,3 +151,26 @@ document.addEventListener("DOMContentLoaded", () => {
   addCourseBtn.click();
   addSemesterBtn.click();
 });
+
+document.querySelectorAll('a[data-open-modal]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const modalId = link.getAttribute('data-open-modal');
+    document.getElementById(modalId).style.display = 'block';
+  });
+});
+
+document.querySelectorAll('.close').forEach(span => {
+  span.addEventListener('click', () => {
+    const modalId = span.getAttribute('data-modal');
+    document.getElementById(modalId).style.display = 'none';
+  });
+});
+
+window.onclick = function (event) {
+  document.querySelectorAll('.modal').forEach(modal => {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  });
+};
