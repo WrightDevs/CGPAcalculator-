@@ -172,9 +172,10 @@
       <div class="footer-section">
         <h3>Help & Support</h3>
         <ul>
-          <li><a href="#">How to Calculate GPA</a></li>
-          <li><a href="#">FUTO Grading System</a></li>
-          <li><a href="#">Degree Classification</a></li>
+          <li><a href="#" data-open-modal="modal-gpa">How to Calculate GPA</a></li>
+<li><a href="#" data-open-modal="modal-grading">FUTO Grading System</a></li>
+<li><a href="#" data-open-modal="modal-class">Degree Classification</a></li>
+<li><a href="#" data-open-modal="modal-about">About This Tool</a></li>
           <li><a href="#">Contact Us</a></li>
         </ul>
       </div>
@@ -216,6 +217,62 @@
     </div>
   </div>
 </footer>
+<!-- Modal Template -->
+<div class="modal" id="modal-gpa">
+  <div class="modal-content">
+    <span class="close" data-modal="modal-gpa">&times;</span>
+    <h2>How to Calculate GPA</h2>
+    <p>
+      GPA (Grade Point Average) is calculated by multiplying each course unit by the grade point earned, summing them up, and dividing by the total number of units taken.<br><br>
+      <strong>Formula:</strong><br>
+      GPA = Total Grade Points / Total Units<br>
+      Grade points are assigned as: A = 5, B = 4, C = 3, D = 2, E = 1, F = 0 (on 5.0 scale).
+    </p>
+  </div>
+</div>
+
+<div class="modal" id="modal-grading">
+  <div class="modal-content">
+    <span class="close" data-modal="modal-grading">&times;</span>
+    <h2>FUTO Grading System</h2>
+    <ul>
+      <li><strong>A</strong>: 70-100 (5.0 points)</li>
+      <li><strong>B</strong>: 60-69 (4.0 points)</li>
+      <li><strong>C</strong>: 50-59 (3.0 points)</li>
+      <li><strong>D</strong>: 45-49 (2.0 points)</li>
+      <li><strong>E</strong>: 40-44 (1.0 point)</li>
+      <li><strong>F</strong>: 0-39 (0 points)</li>
+    </ul>
+  </div>
+</div>
+
+<div class="modal" id="modal-class">
+  <div class="modal-content">
+    <span class="close" data-modal="modal-class">&times;</span>
+    <h2>Degree Classification</h2>
+    <p>
+      Based on your CGPA:
+    <ul>
+      <li>First Class: 4.50 – 5.00</li>
+      <li>Second Class Upper: 3.50 – 4.49</li>
+      <li>Second Class Lower: 2.40 – 3.49</li>
+      <li>Third Class: 1.50 – 2.39</li>
+      <li>Pass: 1.00 – 1.49</li>
+      <li>Fail: 0.00 – 0.99</li>
+    </ul>
+    </p>
+  </div>
+</div>
+
+<div class="modal" id="modal-about">
+  <div class="modal-content">
+    <span class="close" data-modal="modal-about">&times;</span>
+    <h2>About This Tool</h2>
+    <p>
+      CGPA Tracker is a real-time academic calculator built to help Nigerian university students calculate and track their GPA and CGPA with ease. It uses the official NUC grading system and supports multiple scales.
+    </p>
+  </div>
+</div>
   </div>
 <script type="application/ld+json">
 {
